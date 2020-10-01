@@ -3,7 +3,7 @@ from django.urls import path
 from .views import home,listar_pedidos,guardarpedidos,register,formulario_solicitud,Listarpedido,Listarlibro,guardarmensajes,Listarcomentarios,modificar_pedido
 from django.conf.urls import url, include
 
-
+#putosinvidaalguna
 
 urlpatterns = [
     path('', home, name='home'),
