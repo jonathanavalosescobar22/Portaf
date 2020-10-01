@@ -1,0 +1,57 @@
+
+{% load static %}
+<link rel="stylesheet" href="animate.css">
+<body>
+
+{% block content %}
+
+		<form id="formulariolibro"method="POST">
+				  
+                  {% csrf_token %}
+				  <br>
+				  <br>
+				  <br>
+				  <br>
+                  <h2><b>Nombre</b></h2>{{ form.nombre_cliente }}
+				  <br>
+				  <br>
+				  <h2><b>Email</b></h2>{{ form.email_cliente }}
+				  <br>
+				  <br>
+                  <h2><b>Celular</b></h2> {{ form.celular }}
+				  <br>
+				  <br>
+                  <h2><b>Nombre libro</b></h2>{{ form.libro }}
+				  <br>
+				  <br>
+				  <br>
+				  <br>
+				  <br>
+				  <br>
+				  <br>
+				  <br>
+				
+					<!--<h2 class="text-default">Registro a RentCar</h2>
+					<label for="name">Name</label>
+					<input type="text" id="name">
+
+					<label for="email">Email Address</label>
+					<input type="email" id="email"> 
+
+					<button type="submit" class="btn-primary"><i class="fas fa-sign-in-alt" aria-hidden="true"></i> INGRESAR</button>
+                    -->
+                    <button type="submit" class="btn-primary"> Registrar</button>
+					<br>
+					<br>
+					<br>
+				    <br>
+					<a href="{% url 'home' % }">Volver al pagina principal</a>
+				  
+		</form>  
+		</div>
+		</div>	
+		
+
+{% endblock content%}
+
+</body>

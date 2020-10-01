@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+	<title>Libreria</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<link rel="shortcut icon" href="static\core/img/images/favicon.ico">
+     
+	<!-- CSS -->
+	
+	<link href="static\core/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="static\core/css/flexslider.css" rel="stylesheet" type="text/css" />
+	<link href="static\core/css/prettyPhoto.css" rel="stylesheet" type="text/css" />
+	<link href="static\core/css/animate.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="static\core/css/owl.carousel.css" rel="stylesheet">
+	<link href="static\core/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<!-- FONTS -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500italic,700,500,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">	
+    
+	<!-- SCRIPTS -->
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!--[if IE]><html class="ie" lang="en"> <![endif]-->
+	
+	<script src="static\core/js/jquery.min.js" type="text/javascript"></script>
+	<script src="static\core/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="static\core/js/jquery.prettyPhoto.js" type="text/javascript"></script>
+	<script src="static\core/js/jquery.nicescroll.min.js" type="text/javascript"></script>
+	<script src="static\core/js/superfish.min.js" type="text/javascript"></script>
+	<script src="static\core/js/jquery.flexslider-min.js" type="text/javascript"></script>
+	<script src="static\core/js/owl.carousel.js" type="text/javascript"></script>
+	<script src="static\core/js/animate.js" type="text/javascript"></script>
+	<script src="static\core/js/jquery.BlackAndWhite.js"></script>
+	<script src="static\core/js/myscript.js" type="text/javascript"></script>
+	<script>
+	
+	
+
+		//PrettyPhoto
+		jQuery(document).ready(function() {
+			$("a[rel^='prettyPhoto']").prettyPhoto();
+		});
+		
+		//BlackAndWhite
+		$(window).load(function(){
+			$('.client_img').BlackAndWhite({
+				hoverEffect : true, // default true
+				// set the path to BnWWorker.js for a superfast implementation
+				webworkerPath : false,
+				// for the images with a fluid width and height 
+				responsive:true,
+				// to invert the hover effect
+				invertHoverEffect: false,
+				// this option works only on the modern browsers ( on IE lower than 9 it remains always 1)
+				intensity:1,
+				speed: { //this property could also be just speed: value for both fadeIn and fadeOut
+					fadeIn: 300, // 200ms for fadeIn animations
+					fadeOut: 300 // 800ms for fadeOut animations
+				},
+				onImageReady:function(img) {
+					// this callback gets executed anytime an image is converted
+				}
+			});
+		});
+		
+	</script>
+	
+</head>
+<body>
+
+<!-- PRELOADER -->
+<img id="preloader" src="static\core/img/preloader.gif" alt="" />
+<!-- //PRELOADER -->
+<div class="preloader_hide">
+
+	<!-- PAGE -->
+	<div id="page">
+	
+		<!-- HEADER -->
+		<header>
+			
+			<!-- MENU BLOCK -->
+			<div class="menu_block">
+			
+				<!-- CONTAINER -->
+				<div class="container clearfix">
+					
+					<!-- LOGO  -->
+					<div class="logo pull-left">
+						<a href={% url 'home' %} ><span class="b1">VENTA</span><span class="b2">BOOK</span><span class="b3"></span><span class="b4"></span><span class="b5"></span></a>
+					</div>
+				
+					
+					<!-- MENU -->
+					<div class="pull-right">
+						<nav class="navmenu center">
+							<ul>
+								<li class="first active scroll_btn"><a href="#home" >Menu Inicio</a></li>
+								<li class="scroll_btn"><a href="#about" >Sobre nosotros</a></li>
+								<li class="scroll_btn"><a href="#projects" >Stock de libros</a></li>
+								<li class="scroll_btn last"><a href="#contacts" >Contactanos</a></li>
+								<li class="sub-menu">
+									<a href="javascript:void(0);" >Solicitudes</a>
+									<ul>
+										<li><a href={% url 'guardarpedidos' %} >Solicitar libro</a></li>
+										<li><a href={% url 'listar_pedido' %} >Listar pedidos</a></li>
+										<li><a href={% url 'Listarlibro' %} >Lista de libros</a></li>
+										<li><a href={% url 'guardarmensajes' %} >Danos tu opinion</a></li>
+										<li><a href={% url 'Listarcomentarios' %} >Comentarios</a></li>
+										
+									</ul>
+								</li>
+							</ul>
+						</nav>
+					</div><!-- //MENU -->
+				</div><!-- //MENU BLOCK -->
+			</div><!-- //CONTAINER -->
+		</header><!-- //HEADER -->
+		
+		
+		<!-- HOME -->
+		<section id="home" class="padbot0">
+				
+			<!-- TOP SLIDER -->
+
+			<div class="container">  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+	  <li data-target="#myCarousel" data-slide-to="3"></li>
+	  <li data-target="#myCarousel" data-slide-to="4"></li>
+	  <li data-target="#myCarousel" data-slide-to="5"></li>
+	  
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="static\core/img/slider/1.png" alt="1" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="static\core/img/slider/2.png" alt="2" style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img src="static\core/img/slider/3.png" alt="3" style="width:100%;">
+      </div>
+	  <div class="item">
+        <img src="static\core/img/slider/4.png" alt="4" style="width:100%;">
+      </div>
+	  <div class="item">
+        <img src="static\core/img/slider/5.png" alt="5" style="width:100%;">
+      </div>
+	  <div class="item">
+        <img src="static\core/img/slider/6.png" alt="6" style="width:100%;">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
+</section><!-- //HOME -->
+			
+		<!-- ABOUT -->
+		<section id="about">
+			
+			<!-- SERVICES -->
+			<div class="services_block padbot40" data-appear-top-offset="-200" data-animated="fadeInUp">
+				
+				<!-- CONTAINER -->
+				<div class="container">
+				
+					<!-- ROW -->
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
+							<a class="services_item" href="javascript:void(0);" >
+								<p><b>Pedidos</b> a tu gusto</p>
+								<span>Solicita tu pedido,aunque no este en estoy te lo reservamos!.</span>
+							</a>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
+							<a class="services_item" href="javascript:void(0);" >
+								<p><b>Genereros</b> Variados</p>
+								<span>La Biblioteca tiene espacios especialmente concebidos para distintos públicos, con áreas como su Sala Infantil, Sala Juvenil, Sala de la Memoria, Sala de Literatura y de Colecciones Generales..</span>
+							</a>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
+							<a class="services_item" href="javascript:void(0);" >
+								<p><b>La biblioteca</b> mas completa de la region</p>
+								<span>Su colección, inicialmente de 10 mil volúmenes,variadas categorias a gusto del publico y no esta demas decir que está disponible para préstamo a domicilio </span>
+							</a>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
+							<a class="services_item" href="javascript:void(0);" >
+								<p><b>Actualizacion </b>Semanal</p>
+								<span>Nuestro catalogo se va actualizando semanalmente ofreciendo un servicio variado y completo.</span>
+							</a>
+						</div>
+					</div><!-- //ROW -->
+				</div><!-- //CONTAINER -->
+			</div><!-- //SERVICES -->
+			
+			
+		<!-- PROJECTS -->
+		<section id="projects" class="padbot20">
+		
+			<!--CONTAINER -->
+			<div class="container">
+				<h2><b>Stock</b> Actualizado</h2>
+			</div><!--//CONTAINER -->
+			
+				
+			<div class="projects-wrapper" data-appear-top-offset="-200" data-animated="fadeInUp">
+				<!--PROJECTS SLIDER -->
+				<div class="owl-demo owl-carousel projects_slider">
+					
+					 <!--work1 -->
+					<div class="item">
+						<div class="work_item">
+							<div class="work_img">
+								<img src="static\core\img\1.png" alt="error" />
+								<a class="zoom" href="static\core\img\1.png" rel="prettyPhoto[portfolio1]" ></a>
+							</div>
+							<div class="work_description">
+								<div class="work_descr_cont">
+								<a href={% url 'guardarpedidos' %} >Pedir libro</a>
+									<span>Pedido/Reserba, $ 11.990</span>
+								</div>
+							</div>
+						</div>
+					</div><!--//work1-->
+					
+					<!--work2 -->
+					<div class="item">
+						<div class="work_item">
+							<div >
+								<img src="static\core\img\2.png" alt="" />
+								<a class="zoom" href="static\core\img\works2.jpg" rel="prettyPhoto[portfolio1]" ></a>
+							</div>
+							<div class="work_description">
+								<div class="work_descr_cont">
+									<a href={% url 'guardarpedidos' %} >Pedir libro</a>
+									<span>Pedido/Reserba, $ 15.990</span>
+								</div>
+							</div>
+						</div>
+					</div><!--//work2-->
+					
+					 <!--work3 -->
+					<div class="item">
+						<div class="work_item">
+							<div class="work_img">
+								<img src="static\core/img/3.png" alt="" />
+								<a class="zoom" href="static\core/img/works/3.jpg" rel="prettyPhoto[portfolio1]" ></a>
+							</div>
+							<div class="work_description">
+								<div class="work_descr_cont">
+									<a href={% url 'guardarpedidos' %} >Pedir libro</a>
+									<span>Pedido/Reserba, $ 9.990</span>
+								</div>
+							</div>
+						</div>
+					</div><!--//work3 -->
+					
+					 <!--work4 -->
+					<div class="item">
+						<div class="work_item">
+							<div class="work_img">
+								<img src="static\core/img/4.png" alt="" />
+								<a class="zoom" href="static\core/img/works/4.png" rel="prettyPhoto[portfolio1]" ></a>
+							</div>
+							<div class="work_description">
+								<div class="work_descr_cont">
+									<a href={% url 'guardarpedidos' %} >Pedir libro</a>
+									<span>Pedido/Reserba, $ 5.990</span>
+								</div>
+							</div>
+						</div>
+					</div> <!--//work4 -->
+					
+					<!--work5 -->
+					<div class="item">
+						<div class="work_item">
+							<div class="work_img">
+								<img src="static\core/img/5.png" alt="" />
+								<a class="zoom" href="static\core/img/works/5.jpg" rel="prettyPhoto[portfolio1]" ></a>
+							</div>
+							<div class="work_description">
+								<div class="work_descr_cont">
+								<a href={% url 'guardarpedidos' %} >Pedir libro</a>
+									<span>Pedido/Reserba, $ 17.990</span>
+								</div>
+							</div>
+						</div>
+					</div><!-- //work5-->
+				
+					<!-- work6 -->
+					<div class="item">
+						<div class="work_item">
+							<div class="work_img">
+								<img src="static\core/img/6.png" alt="" />
+								<a class="zoom" href="static\core/img/works/6.jpg"  rel="prettyPhoto[portfolio1]" ></a>
+							</div>
+							<div class="work_description">
+								<div class="work_descr_cont">
+									<a href={% url 'guardarpedidos' %} >Pedir libro</a>
+									<span>Pedido/Reserba, $ 22.990</span>
+								</div>
+							</div>
+						</div>
+					</div> <!--//work6 -->
+					
+					 <!--work7--> 
+					<div class="item">
+						<div class="work_item">
+							<div class="work_img">
+								<img src="static\core/img/7.png" alt="" />
+								<a class="zoom" href="static\core/img/works/7.png" rel="prettyPhoto[portfolio1]" ></a>
+							</div>
+							<div class="work_description">
+								<div class="work_descr_cont">
+									<a href={% url 'guardarpedidos' %} >Pedir libro</a>
+									<span>Pedido/Reserba, $ 14.990</span>
+								</div>
+							</div>
+						</div>
+					</div> <!--//work7 -->
+				</div> <!--//PROJECTS SLIDER -->
+			</div>
+
+		</section>		
+	
+</section>
+
+
+		</section><!-- //NEWS -->
+	</div><!-- //PAGE -->
+	
+<!-- TEAM -->
+
+
+	<!-- CONTACTS -->
+	<section id="contacts">
+	</section><!-- //CONTACTS -->
+	
+	<!-- FOOTER -->
+	<footer>
+			
+		<!-- CONTAINER -->
+		<div class="container">
+			
+			<!-- ROW -->
+			<div class="row" data-appear-top-offset="-200" data-animated="fadeInUp">
+				
+				<div class="col-lg-4 col-md-4 col-sm-6 padbot30">
+					<h4><b>Libros mas</b> solicitados</h4>
+					<div class="recent_posts_small clearfix">
+						<div class="post_item_img_small">
+							<img src="static\core\img\1.png" alt="" />
+						</div>
+						<div class="post_item_content_small">
+							<a class="title" href="blog.html" >La niña que bebio luz de luna</a>
+							<ul class="post_item_inf_small">
+								<li>11 Mayo 2020</li>
+							</ul>
+						</div>
+					</div>
+					<div class="recent_posts_small clearfix">
+						<div class="post_item_img_small">
+							<img src="static\core\img\2.png" alt="" />
+						</div>
+						<div class="post_item_content_small">
+							<a class="title" href="blog.html" >La semilla feliz</a>
+							<ul class="post_item_inf_small">
+								<li>18 Marzo 2020</li>
+							</ul>
+						</div>
+					</div>
+					<div class="recent_posts_small clearfix">
+						<div class="post_item_img_small">
+							<img src="static\core\img\3.png" alt="" />
+						</div>
+						<div class="post_item_content_small">
+							<a class="title" href="blog.html" >Los hombres del norte</a>
+							<ul class="post_item_inf_small">
+								<li>14 Junio 2020</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-lg-4 col-md-4 col-sm-6 padbot30 foot_about_block">
+					<h4><b>Sobre</b> nosotros</h4>
+					<p>Nuestra Biblioteca tiene espacios especialmente concebidos para distintos públicos, con áreas como su Sala Infantil, Sala Juvenil, Sala de la Memoria, Sala de Literatura y de Colecciones Generales.</p>
+					<p>Su colección, inicialmente de 10 mil volúmenes,variadas categorias a gusto del publico y no esta demas decir que está disponible para préstamo a domicilio.</p>
+					
+					<ul class="social">
+						<li><a href="https://twitter.com/VBook2020" ><i class="fa fa-twitter"></i></a></li>
+						<li><a href="https://www.facebook.com/VentaBook-105249531229169" ><i class="fa fa-facebook"></i></a></li>
+						<li><a href="javascript:void(0);" ><i class="map_show fa fa-map-marker"></i></a></li>
+					</ul>
+				</div>
+				
+				<div class="respond_clear"></div>
+				
+				<div class="col-lg-4 col-md-4 padbot30">
+					<h4><b>Opina sobre nuestro servicio</b></h4>
+					<li><a href={% url 'guardarmensajes' %} >Tu opinion nos importa</a></li>
+					<!-- CONTACT FORM -->
+					
+			</div><!-- //ROW -->
+			<div class="row copyright">
+				<div class="col-lg-12 text-center">
+				
+				 <p>Biblioteca Virtual</p>
+			
+			</div><!-- //ROW -->
+		</div><!-- //CONTAINER -->
+	</footer><!-- //FOOTER -->
+	
+	
+	<!-- MAP -->
+	<div id="map">
+		<a class="map_hide" href="javascript:void(0);" ><i class="fa fa-angle-right"></i><i class="fa fa-angle-left"></i></a>
+		<iframe src="http://maps.google.com/maps?f=q&amp;give%20a%20hand=s_q&amp;hl=en&amp;geocode=&amp;q=london&amp;sll=37.0625,-95.677068&amp;sspn=42.631141,90.263672&amp;ie=UTF8&amp;hq=&amp;hnear=London,+United+Kingdom&amp;ll=51.500141,-0.126257&amp;spn=0.026448,0.039396&amp;z=14&amp;output=embed" ></iframe>
+	</div><!-- //MAP -->
+
+</div>
+</body>
+</html>
+		
