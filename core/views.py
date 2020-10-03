@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect
 from .forms import RegistroForm,RegistroPedido
 from .models import Genero,Pedido2,Tipo_despacho,Libros,Tipo_pago,Mensaje
 from django.views.generic import ListView
-from django.urls import reverse_lazy
+from django.urls import reverse_laz
+
 # comentario
 # Create your views here.
 class Listarpedido(ListView):
